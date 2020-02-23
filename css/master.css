@@ -1,0 +1,672 @@
+/* -----------------------------------
+Site:       MyrosPizza & Bistro
+CSS author: Greg Miller
+Redesign:	2-28-2011
+Updated:	8-17-2011 
+----------------------------------- */
+
+/* -----------------------------------
+simple reset
+----------------------------------- */
+
+html, body, ul, ol, li, form, fieldset, legend
+{
+	margin: 0;
+	padding: 0;
+}
+
+fieldset, img { border: 0; }
+legend { color: #000; }
+
+input, textarea, select, button
+{
+	font-size: 110%;
+	line-height: 1.1;
+	font-family: helvetica, arial, sans-serif;
+}
+
+button
+{
+	width: auto;
+	overflow: visible;
+}
+
+table
+{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption, th, td
+{
+	text-align: left;
+	vertical-align: top;
+	font-weight: normal;
+}
+
+ul li { list-style: none; }
+
+abbr, acronym
+{
+	border-bottom: .1em dotted;
+	cursor: help;
+}
+
+sup { vertical-align: text-top; }
+sub { vertical-align: text-bottom; }
+
+pre, code
+{
+	font-family: "Courier New", monospace, serif;
+	font-size: 100%;
+	line-height: 1.2;
+}
+
+/* -----------------------------------
+elements
+----------------------------------- */
+
+body
+{
+	color: #000;
+	background: #fff url('../images/w_bkg.jpg')  repeat-x 0 0;
+	font: 90%/1 "DejaVu Sans", "URW Gothic L", "Helvetica Neue", Helvetica, Arial, "Microsoft Sans Serif", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	margin: 0 0 .5em;
+	color: #2C4BAB;
+	text-align: center;
+}
+
+h1 { font-size: 200%; }
+h2 { font-size: 180%; }
+h3 { font-size: 160%; }
+h4 { 
+	font-size: 140%; 
+	color: #0947C0;
+	text-align: left;
+	font-weight: normal;
+}
+h5 { font-size: 120%; }
+h6 { font-size: 100%; }
+
+p
+{ /*
+	margin: 0 0 1.5em;
+	line-height: 1.4; */
+	margin: 0;
+	padding: 0;
+}
+/*
+a:link { color: #0f3163; }
+a:visited { color: #04214b; }
+
+a:focus
+{
+	color: #000;
+	outline: thin dotted;
+}
+
+a:hover { color: #000; }
+a:active { color: red; }
+*/
+.content
+{
+	float: left;
+	width: 974px;
+	/*height: 318px;   footer bumping into other content hiding seems to fix it*/
+	/*background: #FFF url('../images/content.gif') no-repeat scroll 0 0;*/
+	
+}
+.under-content {
+	background: transparent url('../images/reflect.gif') no-repeat scroll 0 0;
+	height: 64px;
+	margin-top: 320px;
+}
+.under-content-left {
+	background: transparent url('../images/reflect-left.gif') no-repeat scroll 0 0;
+	height: 64px;
+	margin-top: 320px;
+}
+.under-content-all {
+	background: transparent url('../images/reflect-all.gif') no-repeat scroll 0 0;
+	
+	margin-top: 320px;
+}
+
+.sidebar
+{
+	float: left;
+	width: 200px;
+}
+.content ol
+{
+	line-height: 1.4;
+	padding: 0 0 1.5em 40px;
+}
+
+.content ul
+{
+	line-height: 1.4;
+	padding: 0 0 1.5em 20px;
+}
+
+.content li { margin: 0 0 .3em; }
+
+.content ul li
+{
+	padding: 0 0 0 20px;
+	background: url(../images/bullet.gif) no-repeat 0 .3em;
+}
+
+/* -----------------------------------
+layout
+----------------------------------- */
+.gutter { margin-left: 5px; }
+
+.panel {
+	padding: 10px ;
+	-moz-border-radius: 12px 12px 12px 12px;
+	-webkit-border-radius: 12px 12px 12px 12px;
+	-o-border-radius: 12px 12px 12px 12px;
+	border-radius: 12px 12px 12px 12px;
+	background-color: #FFF;
+	width: 300px;
+}
+
+#photo-wrapper {
+	/*width: 974px;*/
+	border: 0px solid gold;
+}
+#photos.galleryview  {
+	float: left;
+	width: 320px !important;
+	-moz-border-radius: 12px 12px 12px 12px;
+	-webkit-border-radius: 12px 12px 12px 12px;
+	-o-border-radius: 12px 12px 12px 12px;
+	border-radius: 12px 12px 12px 12px;
+}
+
+.panel .overlay {
+	-moz-border-radius: 0px 0px 12px 12px;
+	-webkit-border-radius: 0px 0px 12px 12px;
+	-o-border-radius: 0px 0px 12px 12px;
+	border-radius: 0px 0px 12px 12px;
+	
+}
+#promos {
+    -moz-border-radius: 12px 12px 12px 12px;
+	-webkit-border-radius: 12px 12px 12px 12px;
+	-o-border-radius: 12px 12px 12px 12px;
+	border-radius: 12px 12px 12px 12px;
+    background: none no-repeat scroll center center #EEF2FF;
+    float: right;
+    min-height: 280px;
+    padding: 20px;
+    width: 600px;
+    overflow: ;
+}
+#promos iframe {float: right;}
+#promos .story {
+
+}
+#promos .blurb {width: 200px; float:left;}
+#promos .story img{
+	margin-left: 20px;
+	position: relative;
+	top: 0px;
+	float: right;
+	width: 200px;
+	
+}
+#promos-left {
+	 -moz-border-radius: 12px 12px 12px 12px;
+	-webkit-border-radius: 12px 12px 12px 12px;
+	-o-border-radius: 12px 12px 12px 12px;
+	border-radius: 12px 12px 12px 12px;
+    background: none no-repeat scroll center center #C6D5F2;
+    float: left;
+    height: 280px;
+    padding: 20px;
+    width: 600px;
+    margin-right: 12px;
+}
+#promos img.imLeft {
+	float: right;
+	padding: .7em;
+	background-color: #DAE3F2;
+	border: 2px solid #99A9C5;
+}
+.story p {
+	font-size: 1.3em;
+	line-height: 1.5em;
+	padding-bottom: 0.5em;
+}
+/* -----------------------------------
+header
+----------------------------------- */
+#holiday {
+	width: 100%;
+	background: url("") repeat-x left -10px;
+}
+
+#wrapper
+{
+	width: 974px;
+	margin: 0 auto;
+}
+
+#header { 
+	padding: 0px; 
+	background: #DDD url('../images/banner_bkg.jpg') no-repeat scroll center center;
+	height: 196px;
+	position: relative;
+	
+}
+.order-online {
+	position: absolute;
+	top: 35px;
+	right: -2px;
+
+}
+#order-online {
+	position: relative;
+	top: 20px;
+	height: 20px;
+	width: 60px;
+	background-color: #FFF;
+}
+iframe {
+	
+}
+
+#letsget {
+	margin: 0 auto;
+	border: 8px solid #FFF;
+}
+
+
+#content-wrapper
+{
+	clear: both;
+	padding: 20px 0 0;
+}
+
+.section-nav
+{
+	float: left;
+	width: 200px;
+}
+.order { 
+	text-align: center;
+	margin: 20px;
+}
+.order a {
+	text-align: center;
+	text-decoration: none;
+	background-color: #0A48C1;
+	color: white;
+	padding: 10px 20px;
+	border-radius: 8px;
+}
+
+.updates .panel {
+	margin: 0 auto;
+}
+.store .online {
+	/* If we add a photo in store, use this setting
+	margin: 0 0 0 471px; */
+}
+
+.btn {
+  color: #fff;
+  background-color: #0A48C1;
+  border: 1px solid rgba(255,255,255, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 5px 0 0 rgba(133, 133, 133, 0.83);
+}
+
+.order .btn:hover {
+  background-color: rgba(10, 72, 193, 0.72);
+}
+
+
+.feature {
+	padding: 2px;
+	background-color: #0A48C1;
+}
+
+
+.menu {
+	margin: 8px 0 12px;
+}
+
+
+
+
+
+/* -----------------------------------
+search-form   
+----------------------------------- */
+
+/* -----------------------------------
+primary-nav
+
+rgb(11, 61, 165)
+rgb(47, 94, 221)
+
+
+----------------------------------- */
+#globalnav {
+	padding: 0 8px; 
+	background: #FFF url('../images/menu_bkg.gif') no-repeat scroll 0 0;
+	height: 64px;
+	-moz-border-radius:  0 0 12px 12px;
+	-webkit-border-radius:  0 0 12px 12px;
+	-o-border-radius:  0 0 12px 12px;
+	border-radius:  0 0 12px 12px;
+	position: relative;
+ }
+#globalnav ul { display: inline; float: right}
+#globalnav li { float: left; padding-top: 20px}
+#globalnav li a {
+	-moz-border-radius: 0 0 8px 8px;
+	-webkit-border-radius: 0 0 8px 8px;
+	-o-border-radius: 0 0 8px 8px;
+	border-radius: 0 0 8px 8px;
+	position: relative;
+    background: url("../images/btn_bkg.gif") repeat-x scroll 0 0 blue;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b3da5+0,6083db+36,0b3da5+100 */
+	background: #0b3da5; /* Old browsers */
+	background: -moz-linear-gradient(top,  #0b3da5 0%, #6083db 36%, #0b3da5 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #0b3da5 0%,#6083db 36%,#0b3da5 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #0b3da5 0%,#6083db 36%,#0b3da5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b3da5', endColorstr='#0b3da5',GradientType=0 ); /* IE6-9 */
+
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-left: 1px;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    top: 0px;
+    z-index: 1;
+}
+#globalnav li a:hover {
+	position: relative;
+    /*background: url("../images/hover.png") no-repeat scroll center 0px transparent;*/
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b3da5+6,6083db+78,0b3da5+100 */
+	background: #0b3da5; /* Old browsers */
+	background: -moz-linear-gradient(top,  #0b3da5 6%, #6083db 78%, #0b3da5 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #0b3da5 6%,#6083db 78%,#0b3da5 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #0b3da5 6%,#6083db 78%,#0b3da5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b3da5', endColorstr='#0b3da5',GradientType=0 ); /* IE6-9 */
+
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-left: 1px;
+    padding: 20px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    top: 0px;
+    overflow: hidden;
+    
+}
+.active {
+	position: relative;
+    background: url("../images/active.png") no-repeat scroll center 0px transparent !important;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0b3da5+6,6083db+78,0b3da5+100 */
+    overflow: hidden;
+}
+
+/* -----------------------------------
+section-nav
+----------------------------------- */
+
+#secondary-nav {
+	padding-right: 2em;
+}
+
+#secondary-nav ul { display: inline; float: right; }
+#footer li {
+	display: inline;
+	padding: 6px 10px;
+	border-left: 1px solid #0A48C1;
+	margin-top: 6px;
+	
+}
+
+#secondary-nav li {
+	padding: 6px 10px;
+	float: left;
+	border-left: 1px solid #0A48C1;
+	margin-top: 6px;
+}
+#secondary-nav li a, #footer li a {
+	
+}
+#secondary-nav li a:hover,
+#footer li a:hover {
+	text-decoration: none;
+	
+}
+#secondary-nav li a.active, #footer li a.active {
+	background:  none !important;
+	text-decoration: none;
+}
+
+/* -----------------------------------
+footer
+----------------------------------- */
+#footer { 
+	clear: both; 
+	width: 974px;
+	margin: 0 auto 80px;
+	padding: 20px 0 30px;
+	
+ }
+ #footer {
+ 	text-align: center;
+ }
+ #footer img.facebook {
+ 	padding-right: 2em;
+ }
+ #footer img.youtube {
+ 	padding-left: 2em;
+ }
+/* -----------------------------------
+box
+----------------------------------- */
+
+/* -----------------------------------
+colors
+----------------------------------- */
+
+/* -----------------------------------
+classes
+----------------------------------- */
+
+.structural
+{
+	position: absolute;
+	left: -500em;
+}
+.full-story {
+	padding 2em;
+	
+}
+.full-story p {
+	padding: 0.5em;
+	overflow: visible;
+	
+}
+.section-left { 
+	padding: 12px; 
+	margin: 10px 0; 
+	width: 450px; 
+	background: #F7F3C9;
+	clear: left;
+	float: left;
+	-moz-border-radius: 12px 12px 12px 12px;
+	-webkit-border-radius: 12px 12px 12px 12px;
+	-o-border-radius: 12px 12px 12px 12px;
+	border-radius: 12px 12px 12px 12px;
+}
+.section-right { 
+	padding: 12px; 
+	margin: 10px 0; 
+	width: 450px; 
+	background: #F7F3C9;
+	-moz-border-radius: 12px 12px 12px 12px;
+	-webkit-border-radius: 12px 12px 12px 12px;
+	-o-border-radius: 12px 12px 12px 12px;
+	border-radius: 12px 12px 12px 12px;
+	float: right;
+}
+p.section_heading { font-size: 1.3em; font-weight: bold; padding: 6px; }
+p.section_description { font-size: .9em; line-height: 1em; padding: 6px 6px 12px 6px; }
+p.items { font-size: 1.1em; padding: 6px 0 0; }
+p.item_info { font-size: .8em; padding: 3px 0;}
+
+#tabs {
+	background: #F7F3C9;
+	-moz-border-radius: 12px 12px 12px 12px;
+	-webkit-border-radius: 12px 12px 12px 12px;
+	-o-border-radius: 12px 12px 12px 12px;
+	border-radius: 12px 12px 12px 12px;
+}
+.ui-widget-header {
+   background: url("../images/btn_bkg.gif") repeat-x scroll 0 0 blue;
+    border: 1px solid #4297D7;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.ui-tabs {
+    padding: 0;
+    position: relative;
+}
+.ui-tabs .ui-tabs-nav {
+    margin: 0;
+    padding: 0.3em 0.3em 0;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+    border-top-right-radius: 12px;
+}
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+    border-top-left-radius: 12px;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+    border-bottom-right-radius: 0;
+}
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+    border-bottom-left-radius: 0;
+}
+.ui-tabs .ui-tabs-panel {
+    min-height: 18em;
+    border:5px solid #0544c0;
+    border-top:0;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+.ui-tabs .ui-tabs-panel p {max-width:40em; }
+.ui-tabs .ui-tabs-panel img {
+	float: right;
+}
+.ui-widget { 
+    font-family:"DejaVu Sans","URW Gothic L","Helvetica Neue",Helvetica,Arial,"Microsoft Sans Serif",sans-serif; border:2px solid #AE9F5F;
+}
+
+.ui-widget-content {
+	border:0;
+    
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    color: #8C022B;
+    text-decoration: none;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    background: none #F7F3C9;
+    border: 1px solid #79B7E7;
+}
+/* ------------------------------
+    Menu Tab Content
+--------------------------------*/
+.ui-tabs .ui-tabs-panel {
+    padding: 1em 0 1em 1.4em;
+}
+
+img.menuBkg {
+	opacity: 1;
+}
+
+/* ------------------------------
+    maps
+--------------------------------*/
+.maps {
+	padding: 1em;
+	background: #F7F3C9;
+	-moz-border-radius: 12px 12px 12px 12px;
+	-webkit-border-radius: 12px 12px 12px 12px;
+	-o-border-radius: 12px 12px 12px 12px;
+	border-radius: 12px 12px 12px 12px;
+	height: 500px;
+}
+.maps iframe { margin: 0 1em 1em 1em;}
+.maps p { margin: 1em;}
+
+.days {
+
+}
+.print-only {display:none;}
+
+.coupons {
+
+	background: #C6D5F2;
+	-moz-border-radius: 12px 12px 12px 12px;
+	-webkit-border-radius: 12px 12px 12px 12px;
+	-o-border-radius: 12px 12px 12px 12px;
+	border-radius: 12px 12px 12px 12px;
+	overflow: visible;
+}
+.coupons p  {
+	padding: 2em 0;
+	text-align: center;
+}
+.contact p  {
+	text-align: center;
+}
+
+
+.coupons img {
+	-moz-border-radius: 12px 12px 12px 12px;
+	-webkit-border-radius: 12px 12px 12px 12px;
+	-o-border-radius: 12px 12px 12px 12px;
+	border-radius: 12px 12px 12px 12px;
+	background-color: #FFF;
+}
+.coupons .make-call {
+	max-width: 850px;
+}
+.make-call-offers {
+	max-width: 600px;
+	height: auto;
+}
+p.button {padding: 1em 0;}
+p.messages {
+	padding:0 0 1em;
+	font-size:16px;
+	font-weight:bold;
+	font-style:italic;
+}
+
+.floatleft {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+p.text-left {text-align:left; padding:1em 1em 0 2em; border-bottom:1px dashed #1652C4;}
+p.text-right {text-align:right; padding:1em 2em 1em 0; border-top:1px dashed #1652C4;}
+
+

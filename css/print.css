@@ -1,0 +1,27 @@
+/* -----------------------------------
+Site:       MyrosPizza & Bistro
+CSS author: Greg Miller
+Redesign:	2-28-2011
+Updated:	8-17-2011 
+----------------------------------- */
+
+/* remove unwanted bits */
+
+
+#header, #globalnav, p.button, .social, .menu {display:none;}
+
+
+/* change bits we want to display */
+
+.print-only {display:block;}
+
+body {
+	font-family: "Georgia", Times New Roman, Serif;
+	color: #000;
+	background: #fff;
+}
+
+p.section_heading {font-size: 16px; text-decoration:underline;font-weight:bold; padding-top:2em; margin:0;}
+p.section_description {font-style:italic; margin:0 0 0 10px;}
+p.items {margin:0;}
+p.item_info {margin:0 0 10px 2em; font-style:italic;}
